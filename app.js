@@ -59,8 +59,7 @@ function endGame(draw) {
 
 function isDraw() {
   return [...cellElements].every(
-    (cell) =>
-      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+    (cell) => cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS),
   );
 }
 
@@ -83,9 +82,5 @@ function setBoardHoverClass() {
 }
 
 function checkWin(currentClass) {
-  return WINNING_COMBINATIONS.some((combination) =>
-    combination.every((index) =>
-      cellElements[index].classList.contains(currentClass)
-    )
-  );
+  return WINNING_COMBINATIONS.some((combination) => combination.every((index) => cellElements[index].classList.contains(currentClass)));
 }
