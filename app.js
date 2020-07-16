@@ -1,3 +1,9 @@
+/* eslint-disable max-len */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-return-assign */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 let circleTurn;
 
 startGame();
@@ -41,8 +47,7 @@ function endGame(draw) {
 
 function isDraw() {
   return [...cellElements].every(
-    (cell) =>
-      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+    (cell) => cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS),
   );
 }
 
@@ -65,9 +70,5 @@ function setBoardHoverClass() {
 }
 
 function checkWin(currentClass) {
-  return WINNING_COMBINATIONS.some((combination) =>
-    combination.every((index) =>
-      cellElements[index].classList.contains(currentClass)
-    )
-  );
+  return WINNING_COMBINATIONS.some((combination) => combination.every((index) => cellElements[index].classList.contains(currentClass)));
 }

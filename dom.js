@@ -1,3 +1,9 @@
+/* eslint-disable max-len */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-return-assign */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
 const X_CLASS = 'x';
 const CIRCLE_CLASS = 'circle';
 const WINNING_COMBINATIONS = [
@@ -15,5 +21,5 @@ const board = document.getElementById('board');
 const winningMessageElement = document.getElementById('winningMessage');
 const restartButton = document.getElementById('restartButton');
 const winningMessageTextElement = document.querySelector(
-  '[data-winning-message-text]'
+  '[data-winning-message-text]',
 );
