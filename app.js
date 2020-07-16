@@ -3,6 +3,18 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+const X_CLASS = 'x';
+const CIRCLE_CLASS = 'circle';
+const WINNING_COMBINATIONS = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
+];
 
 let circleTurn;
 
@@ -47,7 +59,8 @@ function endGame(draw) {
 
 function isDraw() {
   return [...cellElements].every(
-    (cell) => cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS),
+    (cell) =>
+      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
   );
 }
 
@@ -70,5 +83,9 @@ function setBoardHoverClass() {
 }
 
 function checkWin(currentClass) {
-  return WINNING_COMBINATIONS.some((combination) => combination.every((index) => cellElements[index].classList.contains(currentClass)));
+  return WINNING_COMBINATIONS.some((combination) =>
+    combination.every((index) =>
+      cellElements[index].classList.contains(currentClass)
+    )
+  );
 }
