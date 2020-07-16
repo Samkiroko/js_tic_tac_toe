@@ -15,7 +15,7 @@ const board = document.getElementById('board');
 const winningMessageElement = document.getElementById('winningMessage');
 const restartButton = document.getElementById('restartButton');
 const winningMessageTextElement = document.querySelector(
-  '[data-winning-message-text]'
+  '[data-winning-message-text]',
 );
 let circleTurn;
 
@@ -59,11 +59,9 @@ function endGame(draw) {
 }
 
 function isDraw() {
-  return [...cellElements].every((cell) => {
-    return (
-      cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
-    );
-  });
+  return [...cellElements].every((cell) => (
+    cell.classList.contains(X_CLASS) || cell.classList.contains(CIRCLE_CLASS)
+  ));
 }
 
 function placeMark(cell, currentClass) {
@@ -85,9 +83,5 @@ function setBoardHoverClass() {
 }
 
 function checkWin(currentClass) {
-  return WINNING_COMBINATIONS.some((combination) => {
-    return combination.every((index) => {
-      return cellElements[index].classList.contains(currentClass);
-    });
-  });
+  return WINNING_COMBINATIONS.some((combination) => combination.every((index) => cellElements[index].classList.contains(currentClass)));
 }

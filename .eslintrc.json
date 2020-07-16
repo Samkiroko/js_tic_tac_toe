@@ -18,7 +18,8 @@
     "max-classes-per-file": "off",
     "no-unused-vars": "off",
     "no-plusplus": "off",
-    "eqeqeq": "off"
+    "eqeqeq": "off",
+    "max-len": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
