@@ -173,8 +173,8 @@ body {
   border-radius: 10px;
 }
 
-.side-link-youtube {
-  background-color: red;
+.side-link-linkedin {
+  background-color: #0077b5;
 }
 
 .side-link-twitter {
@@ -193,4 +193,8 @@ body {
 .side-link-icon {
   color: white;
   font-size: 30px;
+}
+
+.header-color {
+  color: #6e5494;
 }
