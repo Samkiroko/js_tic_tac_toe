@@ -152,7 +152,7 @@ body {
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 
 * {
-  font-family: Raleway;
+  font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
 }
 
 .side-links {
